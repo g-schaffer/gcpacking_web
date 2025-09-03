@@ -15,7 +15,6 @@ export default function SearchPage() {
   const [photos, setPhotos] = useState<Photo[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const supabase = createClient()
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -30,6 +29,7 @@ export default function SearchPage() {
     setPhotos([])
 
     try {
+      const supabase = createClient()
       const { data, error: fetchError } = await supabase
         .from('photos')
         .select('*')
