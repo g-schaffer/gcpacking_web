@@ -32,14 +32,14 @@ export default function LoginPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center relative" style={{ backgroundColor: '#F0EBE5' }}>
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
+      <div className="absolute top-4 sm:top-8 left-1/2 transform -translate-x-1/2">
         <img
           src="/logo.jpg"
           alt="Logo"
-          className="h-80 w-auto"
+          className="h-32 sm:h-48 md:h-64 lg:h-80 w-auto max-w-[90vw] object-contain"
         />
       </div>
-      <div className="w-full max-w-md space-y-8 rounded-xl bg-white p-8 shadow-lg mt-32">
+      <div className="w-full max-w-md space-y-8 rounded-xl bg-white p-4 sm:p-8 shadow-lg mt-24 sm:mt-32 md:mt-40 lg:mt-48 mx-4">
         <div>
           <h2 className="text-center text-3xl font-bold tracking-tight" style={{ color: '#1D436A' }}>
             Connexion
