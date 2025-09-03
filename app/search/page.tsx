@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
-import Image from 'next/image'
 
 interface Photo {
   id: string
@@ -99,7 +98,7 @@ export default function SearchPage() {
         {photos.length > 0 && (
           <div>
             <p className="mb-4 text-lg font-semibold text-gray-700">
-              {photos.length} photo{photos.length > 1 ? 's' : ''} trouvée{photos.length > 1 ? 's' : ''} pour la commande "{searchQuery}"
+              {photos.length} photo{photos.length > 1 ? 's' : ''} trouvée{photos.length > 1 ? 's' : ''} pour la commande &ldquo;{searchQuery}&rdquo;
             </p>
             
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
